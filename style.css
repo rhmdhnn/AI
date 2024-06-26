@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#userInput {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#output {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typeAndDelete {
+    0%, 10% {
+        width: 0;
+    }
+    45%, 55% {
+        width: 6.2em;
+    } /* adjust width based on content */
+    90%, 100% {
+        width: 0;
+    }
+}
+
+.terminal-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Full black background */
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.terminal-controls {
+    display: flex;
+}
+
+.control {
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.4em;
+    border-radius: 50%;
+    background-color: #777;
+}
+
+.terminal-title {
+    line-height: 1.5em;
+    color: #eee;
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green; /* Cursor */
+    animation: blinkCursor 0.5s step-end infinite alternate;
+    margin-top: 1.5em;
+}
