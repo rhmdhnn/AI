@@ -31,7 +31,7 @@ function showLoadingScreen() {
         clearInterval(loadingInterval);
 
         if (inputText.trim() === "") {
-            outputText = "Kamu Tidak Memikirkan Apapun";
+            outputText = "Kamu Tidak Memikirkan Angka Berapapun";
         } else { 
             outputText = "Kamu Memikirkan Angka " + inputText.toUpperCase();
         }
